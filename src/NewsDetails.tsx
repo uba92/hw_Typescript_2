@@ -28,6 +28,7 @@ const NewsDetails = () => {
         }
         useEffect(() => {
             getData()
+        // eslint-disable-next-line react-hooks/exhaustive-deps
         }, [params.id])
     return(
         <Container>
@@ -37,11 +38,14 @@ const NewsDetails = () => {
                     <Card style={{height: '80vh', overflow: 'hidden'}}>
                     <Card.Img variant="top" src={news.image_url} style={{height: '80%'}}/>
                     <Card.Body>
-                      <Card.Title>Card Title</Card.Title>
+                      <Card.Title>{news.title}</Card.Title>
                       <Card.Text>
-                        Some quick example text to build on the card title and make up the
-                        bulk of the card's content.
+                       Pubblicato il  {news.published_at}
                       </Card.Text>
+                      <Card.Text>
+                        {news.summary}
+                      </Card.Text>
+                     
                       
                     </Card.Body>
                   </Card>
