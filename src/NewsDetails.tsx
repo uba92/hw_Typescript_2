@@ -35,7 +35,7 @@ const NewsDetails = () => {
                 <Col>
                 {news && (
                     <Card style={{height: '80vh', overflow: 'hidden'}}>
-                    <Card.Img variant="top" src={news.image_url}/>
+                    <Card.Img variant="top" src={news.image_url} style={{height: '80%'}}/>
                     <Card.Body>
                       <Card.Title>Card Title</Card.Title>
                       <Card.Text>
