@@ -1,5 +1,6 @@
 import { Card } from "react-bootstrap"
 import IResult from "./types/Results"
+import { Link } from "react-router-dom"
 
 interface SingleNewsProps {
     singleNew: IResult
@@ -7,6 +8,7 @@ interface SingleNewsProps {
 
 const SingleNews = (props: SingleNewsProps) => {
     return(
+        <Link to={'/details/' + props.singleNew.id} className='nav-link'>
         <Card style={{height: '100%', overflow: 'hidden'}}>
       <Card.Img variant="top" src={props.singleNew.image_url} style={{height: '200px'}}/>
       <Card.Body>
@@ -17,6 +19,7 @@ const SingleNews = (props: SingleNewsProps) => {
         
       </Card.Body>
     </Card>
+    </Link>
     )
 }
 
